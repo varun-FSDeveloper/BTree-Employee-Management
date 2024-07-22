@@ -2,8 +2,7 @@
 
 
 
-A flight booking Django application written in Python, HTML, CSS & Javascript.
-This is the BTree project for Python Programming BootCamp with Python and Javascript.
+An employee management system written in ASP.NET MVC using C#, HTML, CSS, and JavaScript. This is the BTree project for the .NET Programming BootCamp with ASP.NET and JavaScript.
 
 #### Project Video: [Watch on Youtube](https://www.youtube.com/channel/UC3CWkAYRbqUFLq6wQF-VyPw)
 #### Live Demo : [Click Here](http://54.175.64.42:8000/)
