@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BTree Employee Management System</title>
+    <link rel="shortcut icon" href="~/Logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .main-head {
+            margin-top: 35px;
+            height: 560px;
+            margin-bottom: 2rem;
+            background: url("../../pexels-olly-3866632.jpg");
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: cover;
+            /*background-image: linear-gradient(to right, #000000, #0e0b0d, #171416, #1e1a1e, #242127, #242127, #242127, #242127, #1e1a1e, #171416, #0e0b0d, #000000);*/
+            border-radius: 2.1rem;
+        }
+
+        .overlay {
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.9248949579831933) 17%, rgba(43,43,43,0.7792366946778712) 42%, rgba(252,252,252,0) 70%);
+            position: absolute;
+            top: 0px;
+            height: 560px;
+            border-radius: 2.1rem;
+            margin-left: -15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .main-head h2 {
+            font-size: 3.3em;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            color: white;
+            -webkit-text-stroke: white .2px;
+            margin-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        .main-head p {
+            margin-right: 20px;
+            margin-left: 40px;
+            font-size: 18px;
+            color: azure;
+            transition: linear ease-in 1s;
+        }
+
+        .main-head a {
+            margin-left: 40px;
+            margin-top: 20px;
+            background: black;
+            color: white;
+            transition: linear 0.5s;
+        }
+
+            .main-head a:hover {
+                background: white;
+                color: black;
+            }
+
+        .main-head .slo {
+            margin-top: 40px;
+            font-size: 2.5em;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            width: 450px;
+            text-shadow: 1.5px 1.3px 12px #2a2929;
+            /*-webkit-text-stroke:1.5px black;*/
+        }
+        
+        body {
+            background: rgb(241,241,241);
+            background: linear-gradient(90deg, rgba(241,241,241,1) 8%, rgba(217,215,215,0.7792366946778712) 46%, rgba(252,252,252,1) 92%);
+        }
+    </style>
+    <style>
+        .cont {
+            display: grid;
+            grid-template-columns: repeat(2,1fr)
+        }
+    </style>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("BTree Systems", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Create", "Create", "Employee")</li>
+                    <li>@Html.ActionLink("Details", "Index", "Employee")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+       
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Btree Systems Application.Dev</p>
+        </footer>
+    </div>
+
+    <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+
+    <script>
+
+        function checkScreenSize() {
+            var paragraph = document.getElementById("main-para");
+            var p1 = document.getElementById("main-para1");
+            var h1 = document.getElementById("main-h1");
+            var over = document.getElementsByClassName("overlay");
+            var mainHead = document.getElementById("main-head");
+            if (window.innerWidth < 995) {
+                paragraph.style.display = "none";
+                p1.style.fontSize = "15px";
+            } else {
+                p1.style.fontSize = "18px";
+                paragraph.style.display = "block";
+            }
+
+            if (window.innerWidth < 500) {
+                h1.style.fontSize = "2.3em";
+                p1.style.display = "none";
+                mainHead.style.height = "320px";
+                over[0].style.height = "320px";
+
+            }
+            else {
+                p1.style.display = "block";
+                mainHead.style.height = "560px";
+                over[0].style.height = "560px";
+                h1.style.fontSize = "3.3em";
+            }
+
+        }
+
+        // Check screen size when the page loads
+        window.onload = checkScreenSize;
+
+        // Check screen size when the window is resized
+        window.onresize = checkScreenSize;
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
