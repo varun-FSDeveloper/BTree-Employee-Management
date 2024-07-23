@@ -2,7 +2,7 @@
 
 
 
-An employee management system written in ASP.NET MVC using C#, HTML, CSS, and JavaScript. This is the BTree project for the .NET Programming BootCamp with ASP.NET and JavaScript.
+An employee management system written in ASP.NET MVC using C#, ADO.Net, HTML, CSS, and JavaScript. This is the BTree project for the .NET Programming BootCamp with ASP.NET MVC.
 
 #### Project Video: [Watch on Youtube](https://www.youtube.com/channel/UC3CWkAYRbqUFLq6wQF-VyPw)
 #### Live Demo : [Click Here](http://54.175.64.42:8000/)
@@ -17,7 +17,6 @@ An employee management system written in ASP.NET MVC using C#, HTML, CSS, and Ja
 1. Create, Update, and Delete an Employee's details.
 2. View single employee details as well as all records for employees.
 3. Webpages are mobile responsive.
-4. As-you-type search functionality.
 
 ## Files & Directories
 
@@ -59,19 +58,70 @@ An employee management system written in ASP.NET MVC using C#, HTML, CSS, and Ja
 
 ## Justification
 
-1. Mobile responsive webpages.
-2. More complex models.
-3. More interactive because webpages use AJAX functionality (e.g., fetch) written in JavaScript.
-4. Provides create, update, delete, and search functionalities for employee records.
+# Performance Optimization:
 
-## Installation
+Use caching, lazy loading, and code splitting.
+Optimize database queries and frontend performance.
 
-- Install .NET Core SDK from here manually.
-- Install project dependencies by running dotnet restore in the project directory.
-- Run the command dotnet ef migrations add InitialCreate and dotnet ef database update in the project directory to make and apply migrations.
-- Create an administrator account using a custom script or directly within the application.
-- Run the command dotnet run to run the web server.
-- Open a web browser and go to https://localhost:5001 URL to start using the web application.
+# User-Friendly UI:
+
+Design intuitive and accessible interfaces.
+Provide helpful feedback and error messages.
+
+# Testing and Debugging:
+
+Implement unit, integration, and end-to-end tests.
+Use debugging tools and logging for maintenance.
+
+# Project Installation Guide
+
+## Prerequisites
+
+- .NET Framework: Download and install from [here](https://dotnet.microsoft.com/download/dotnet-framework).
+- Visual Studio: Ensure you have Visual Studio installed with the necessary workloads for .NET development.
+
+## Installation Steps
+
+1. **Install .NET Framework:**
+   - Download and install .NET Framework from [here](https://dotnet.microsoft.com/download/dotnet-framework) manually.
+
+2. **Install Project Dependencies:**
+   - Open the project in Visual Studio.
+   - Use NuGet Package Manager to install necessary packages.
+
+3. **Setup ASP.NET MVC:**
+   - Ensure your project is set up using the ASP.NET MVC framework.
+   - Create Controllers, Views, and Models as needed.
+   - Configure routing in `RouteConfig.cs` to define your application's URL patterns.
+
+4. **Setup Database with ADO.NET:**
+   - Ensure your database is set up and accessible.
+   - Use ADO.NET to interact with your database.
+   - Create connection strings in your `web.config` file:
+     ```xml
+     <connectionStrings>
+         <add name="DefaultConnection" connectionString="YourConnectionString" providerName="System.Data.SqlClient" />
+     </connectionStrings>
+     ```
+   - Implement data access logic using ADO.NET (e.g., `SqlConnection`, `SqlCommand`, `SqlDataReader`).
+
+5. **Create Administrator Account:**
+   - Use a custom script or directly create an administrator account within the application.
+
+6. **Build and Run the Project:**
+   - Build and run the project in Visual Studio to start the web server.
+
+7. **Access the Web Application:**
+   - Open a web browser and go to `https://localhost:5001` to start using the web application.
+
+## Notes
+
+- Ensure all necessary services (e.g., SQL Server) are running and accessible.
+- Modify the connection string as per your database configuration.
+- Follow best practices for security and data protection.
+
+For any issues or further assistance, please refer to the project's documentation or contact the support team.
+
 
 ### Our Other Social Platforms
 
