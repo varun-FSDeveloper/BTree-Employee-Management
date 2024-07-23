@@ -58,17 +58,17 @@ An employee management system written in ASP.NET MVC using C#, ADO.Net, HTML, CS
 
 ## Justification
 
-# Performance Optimization:
+### Performance Optimization:
 
 Use caching, lazy loading, and code splitting.
 Optimize database queries and frontend performance.
 
-# User-Friendly UI:
+### User-Friendly UI:
 
 Design intuitive and accessible interfaces.
 Provide helpful feedback and error messages.
 
-# Testing and Debugging:
+### Testing and Debugging:
 
 Implement unit, integration, and end-to-end tests.
 Use debugging tools and logging for maintenance.
