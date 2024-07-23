@@ -78,7 +78,7 @@ Use debugging tools and logging for maintenance.
 ## Prerequisites
 
 - .NET Framework: Download and install from [here](https://dotnet.microsoft.com/download/dotnet-framework).
-- Visual Studio: Ensure you have Visual Studio installed with the necessary workloads for .NET development.
+- Visual Studio: Ensure you have Visual Studio & SQL Server installed with the necessary workloads for .NET development.[here](https://bit.ly/BtreeRepoLink).
 
 ## Installation Steps
 
