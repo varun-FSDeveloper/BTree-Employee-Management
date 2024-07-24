@@ -11,7 +11,7 @@ namespace Employee.Controllers
     public class EmployeeController : Controller
     {
 
-        string connectionString = @"Data Source=JARVISS\SQLEXPRESS;Initial Catalog=EmployeeDB;Integrated Security=SSPI";
+        string connectionString = @"Data Source=DESKTOP-N0LGVQG\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=SSPI";
 
         // GET: Employee
         public ActionResult Index()
