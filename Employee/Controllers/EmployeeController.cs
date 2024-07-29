@@ -10,8 +10,10 @@ namespace Employee.Controllers
 {
     public class EmployeeController : Controller
     {
-
-        string connectionString = @"Data Source=DESKTOP-N0LGVQG\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=SSPI";
+    // Data Source = Your Server Name
+    // Initial Catalog = Your DataBase Name
+    // Integrated Security = True/False/SSPI
+        string connectionString = @"Data Source= yourservername;Initial Catalog= yourdbname;Integrated Security= yourintegratedsecurity";
 
         // GET: Employee
         public ActionResult Index()
